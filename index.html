@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Tiffin-Time</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+  
+<section id="home">
+  <!-- hero / banner / top content -->
+</section>    
+<nav>
+      <div class="logo">Tiffin <span style="color: red;">Time</span> </div>
+    <ul>
+      <li><b><a href="#home">Home</a></b></li>
+      <li><b><a href="#menu">Menu</a></b></li>
+      <li><b><a href="#about">About</a></b></li>
+      <li><b><a href="#contact">Manual Order</a></b></li>
+    </ul>
+  </nav>
+<br>
+<br>
+<Main class="Main-backgrundcolor">
+<br>
+<div class="TopMain-Tiifin-Pic">
+        <img src="./Images/Tiffin Pic.png" width="20%" >
+</div>
+<main class="Main-Container-1">
+
+
+   <div class="top-First-Box hover" >
+       <h2>Why Choose Tiffin Time</h2>     
+          <p>
+            “Every tiffin is prepared with strict hygiene standards. Your child's health and safety are our top priority.”
+          </p>
+  </div>
+
+  <div class="top-second-Box hover">
+    <h2>Nutritious & Balanced</h2>
+      <p>“Our meals are designed to provide all the essential nutrients your child needs for a healthy and energetic school day.”</p>
+  </div> 
+
+  <div class="top-Third-Box hover">
+      <h2>Tasty & Loved by Kids</h2>
+          <p> “Delicious flavors and fun meals make lunchtime exciting. Kids enjoy every bite while getting the nutrition they need.”</p>
+
+  </div> 
+</main>
+<br>
+</main>
+
+<section id="menu"></section>
+<br>
+<br>
+
+
+
+<main>
+   <div class="Our-Menu">
+    <p>Our MENU</p>
+   </div>
+</main>
+
+
+
+<Main>
+  <div class="Check-Our-tifin-menu">
+    <p><b>CHECK OUR <span id="Exam-Menu">TIFFIN MENU</b></span></p>
+  </div>
+</Main>
+
+<!-- <main>
+  <div class="Selecter-Menu">
+    <a id="Selecter">Paratha</a>
+    <a id="Selecter">Sandwich</a>
+    <a id="Selecter">Kabab</a>
+    <a id="Selecter">Drinks</a>
+  </div>
+</main> -->
+
+<br>
+
+<div class="categories">
+  <button onclick="filterMenu('paratha')"><b>Paratha</b></button>
+  <button onclick="filterMenu('sandwich')"><b>Sandwich</b></button>
+  <button onclick="filterMenu('kabab')"><b>Kabab</b></button>
+  <button onclick="filterMenu('drinks')"><b>Drinks</b></button>
+</div>
+
+<!-- MENU ITEMS -->
+<div class="menu">
+
+  <!-- PARATHA -->
+  <div class="item paratha">
+    <img src="./Images/Paratha/paratha.png">
+    <h3>Piyaz Paratha</h3>
+    <p>Price: Rs <span class="price">50</span></p>
+
+    <div class="order">
+      Qty:
+      <input type="number" value="1" min="1" onchange="updateTotal(this)">
+      <span>Total: Rs <b class="total">50</b></span>
+      </div>
+    
+    <div class="days">
+    <label>Select multiple Days:</label>
+    <input type="text"
+           class="date-input"
+           placeholder="Select days"
+           readonly
+           onclick="openCalendar(this)">
+    <div class="calendar hidden"></div>
+    </div>  
+
+    <a class="buy" href="#" onclick="buyWhatsApp(this)">Buy on WhatsApp</a>
+  </div>
+
+ <div class="item paratha">
+    <img src="./Images/Paratha/aloo-paratha.png">
+    <h3>Aloo Paratha</h3>
+    <p>Price: Rs <span class="price">70</span></p>
+
+    <div class="order">
+      Qty:
+      <input type="number" value="1" min="1" onchange="updateTotal(this)">
+      <span>Total: Rs <b class="total">70</b></span>
+    </div>
+
+        <div class="days">
+    <label>Select multiple Days:</label>
+    <input type="text"
+           class="date-input"
+           placeholder="Select days"
+           readonly
+           onclick="openCalendar(this)">
+    <div class="calendar hidden"></div>
+    </div>
+
+    <a class="buy" href="#" onclick="buyWhatsApp(this)">Buy on WhatsApp</a>
+  </div>
+
+ <div class="item paratha">
+    <img src="./Images/Paratha/Aloo Cheese paratha.png">
+    <h3>Aloo Cheese Paratha</h3>
+    <p>Price: Rs <span class="price">90</span></p>
+
+    <div class="order">
+      Qty:
+      <input type="number" value="1" min="1" onchange="updateTotal(this)">
+      <span>Total: Rs <b class="total">90</b></span>
+    </div>
+
+        <div class="days">
+    <label>Select multiple Days:</label>
+    <input type="text"
+           class="date-input"
+           placeholder="Select days"
+           readonly
+           onclick="openCalendar(this)">
+    <div class="calendar hidden"></div>
+    </div>
+
+    <a class="buy" href="#" onclick="buyWhatsApp(this)">Buy on WhatsApp</a>
+  </div>  
+ <div class="item paratha">
+    <img src="./Images/Paratha/Chicken paratha roll.png">
+    <h3>Chicken Paratha</h3>
+    <p>Price: Rs <span class="price">120</span></p>
+
+    <div class="order">
+      Qty:
+      <input type="number" value="1" min="1" onchange="updateTotal(this)">
+      <span>Total: Rs <b class="total">120</b></span>
+    </div>
+
+        <div class="days">
+    <label>Select multiple Days:</label>
+    <input type="text"
+           class="date-input"
+           placeholder="Select days"
+           readonly
+           onclick="openCalendar(this)">
+    <div class="calendar hidden"></div>
+    </div>
+
+    <a class="buy" href="#" onclick="buyWhatsApp(this)">Buy on WhatsApp</a>
+  </div>  
+
+ <div class="item paratha">
+    <img src="./Images/Paratha/Kabab Parhtha.png">
+    <h3>Kabab Paratha</h3>
+    <p>Price: Rs <span class="price">100</span></p>
+
+    <div class="order">
+      Qty:
+      <input type="number" value="1" min="1" onchange="updateTotal(this)">
+      <span>Total: Rs <b class="total">100</b></span>
+    </div>
+
+
+        <div class="days">
+    <label>Select multiple Days:</label>
+    <input type="text"
+           class="date-input"
+           placeholder="Select days"
+           readonly
+           onclick="openCalendar(this)">
+    <div class="calendar hidden"></div>
+    </div>
+
+    <a class="buy" href="#" onclick="buyWhatsApp(this)">Buy on WhatsApp</a>
+  </div>
+
+  <!-- SANDWICH -->
+  <div class="item sandwich">
+    <img src="./Images/Sandwich/Egg Sandwich.png">
+    <h3>Sandwich</h3>
+    <p>Price: Rs <span class="price">40</span></p>
+
+    <div class="order">
+      Qty:
+      <input type="number" value="1" min="1" onchange="updateTotal(this)">
+      <span>Total: Rs <b class="total">40</b></span>
+    </div>
+
+
+        <div class="days">
+    <label>Select multiple Days:</label>
+    <input type="text"
+           class="date-input"
+           placeholder="Select days"
+           readonly
+           onclick="openCalendar(this)">
+    <div class="calendar hidden"></div>
+    </div>
+
+    <a class="buy" href="#" onclick="buyWhatsApp(this)">Buy on WhatsApp</a>
+  </div>
+
+  <div class="item sandwich">
+    <img src="./Images/Sandwich/vegetarian-club-sandwich-recipe.png">
+    <h3>vegetarian Sandwich</h3>
+    <p>Price: Rs <span class="price">50</span></p>
+
+    <div class="order">
+      Qty:
+      <input type="number" value="1" min="1" onchange="updateTotal(this)">
+      <span>Total: Rs <b class="total">50</b></span>
+    </div>
+
+        <div class="days">
+    <label>Select multiple Days:</label>
+    <input type="text"
+           class="date-input"
+           placeholder="Select days"
+           readonly
+           onclick="openCalendar(this)">
+    <div class="calendar hidden"></div>
+    </div>
+
+    <a class="buy" href="#" onclick="buyWhatsApp(this)">Buy on WhatsApp</a>
+  </div>
+
+ <div class="item sandwich">
+    <img src="./Images/Sandwich/Chicken Sandwich.png">
+    <h3>Chicken Sandwich</h3>
+    <p>Price: Rs <span class="price">70</span></p>
+
+    <div class="order">
+      Qty:
+      <input type="number" value="1" min="1" onchange="updateTotal(this)">
+      <span>Total: Rs <b class="total">70</b></span>
+    </div>
+
+        <div class="days">
+    <label>Select multiple Days:</label>
+    <input type="text"
+           class="date-input"
+           placeholder="Select days"
+           readonly
+           onclick="openCalendar(this)">
+    <div class="calendar hidden"></div>
+    </div>
+
+    <a class="buy" href="#" onclick="buyWhatsApp(this)">Buy on WhatsApp</a>
+  </div>
+
+ <div class="item sandwich">
+    <img src="./Images/Sandwich/Chicken Chese Sandwich.png">
+    <h3>Chicken Chese Sandwich</h3>
+    <p>Price: Rs <span class="price">100</span></p>
+
+    <div class="order">
+      Qty:
+      <input type="number" value="1" min="1" onchange="updateTotal(this)">
+      <span>Total: Rs <b class="total">100</b></span>
+    </div>
+
+        <div class="days">
+    <label>Select multiple Days:</label>
+    <input type="text"
+           class="date-input"
+           placeholder="Select days"
+           readonly
+           onclick="openCalendar(this)">
+    <div class="calendar hidden"></div>
+    </div>
+
+    <a class="buy" href="#" onclick="buyWhatsApp(this)">Buy on WhatsApp</a>
+  </div>
+
+ <div class="item sandwich">
+    <img src="./Images/Sandwich/Kabbab Sandwich.png">
+    <h3>Kabbab Sandwich</h3>
+    <p>Price: Rs <span class="price">80</span></p>
+
+    <div class="order">
+      Qty:
+      <input type="number" value="1" min="1" onchange="updateTotal(this)">
+      <span>Total: Rs <b class="total">80</b></span>
+    </div>
+
+        <div class="days">
+    <label>Select multiple Days:</label>
+    <input type="text"
+           class="date-input"
+           placeholder="Select days"
+           readonly
+           onclick="openCalendar(this)">
+    <div class="calendar hidden"></div>
+    </div>
+
+    <a class="buy" href="#" onclick="buyWhatsApp(this)">Buy on WhatsApp</a>
+  </div>
+
+<!-- KABAB -->
+<div class="item kabab">
+  <img src="./Images/Shami Kabbab/Shami Kabbab.png">
+  <h3>Shami Kabab</h3>
+  <p>Price: Rs <span class="price">50</span></p>
+
+  <div class="order">
+    Qty:
+    <input type="number" value="1" min="1" onchange="updateTotal(this)">
+    <span>Total: Rs <b class="total">50</b></span>
+  </div>
+
+  <!-- DAYS / CALENDAR -->
+  <div class="days">
+    <label>Select multiple Days:</label>
+    <input type="text"
+           class="date-input"
+           placeholder="Select days"
+           readonly
+           onclick="openCalendar(this)">
+    <div class="calendar hidden"></div>
+  </div>
+
+  <a class="buy" href="#" onclick="buyWhatsApp(this)">Buy on WhatsApp</a>
+</div>
+
+<div class="item kabab">
+  <img src="./Images/Shami Kabbab/Chapli_Kebab.png">
+  <h3>Chapli Kabab</h3>
+  <p>Price: Rs <span class="price">60</span></p>
+
+  <div class="order">
+    Qty:
+    <input type="number" value="1" min="1" onchange="updateTotal(this)">
+    <span>Total: Rs <b class="total">60</b></span>
+  </div>
+
+  <!-- DAYS / CALENDAR -->
+  <div class="days">
+    <label>Select multiple Days:</label>
+    <input type="text"
+           class="date-input"
+           placeholder="Select days"
+           readonly
+           onclick="openCalendar(this)">
+    <div class="calendar hidden"></div>
+  </div>
+
+  <a class="buy" href="#" onclick="buyWhatsApp(this)">Buy on WhatsApp</a>
+</div>
+
+<div class="item kabab">
+  <img src="./Images/Shami Kabbab/AlooKabab_PotatoCutlet-3.png">
+  <h3>Aloo Kabab</h3>
+  <p>Price: Rs <span class="price">50</span></p>
+
+  <div class="order">
+    Qty:
+    <input type="number" value="1" min="1" onchange="updateTotal(this)">
+    <span>Total: Rs <b class="total">50</b></span>
+  </div>
+
+  <!-- DAYS / CALENDAR -->
+  <div class="days">
+    <label>Select multiple Days:</label>
+    <input type="text"
+           class="date-input"
+           placeholder="Select days"
+           readonly
+           onclick="openCalendar(this)">
+    <div class="calendar hidden"></div>
+  </div>
+
+  <a class="buy" href="#" onclick="buyWhatsApp(this)">Buy on WhatsApp</a>
+</div>
+
+<div class="item kabab">
+  <img src="./Images/Shami Kabbab/Cheese Kabbab.png">
+  <h3>Cheese Kabab</h3>
+  <p>Price: Rs <span class="price">60</span></p>
+
+  <div class="order">
+    Qty:
+    <input type="number" value="1" min="1" onchange="updateTotal(this)">
+    <span>Total: Rs <b class="total">60</b></span>
+  </div>
+
+  <!-- DAYS / CALENDAR -->
+  <div class="days">
+    <label>Select multiple Days:</label>
+    <input type="text"
+           class="date-input"
+           placeholder="Select days"
+           readonly
+           onclick="openCalendar(this)">
+    <div class="calendar hidden"></div>
+  </div>
+
+  <a class="buy" href="#" onclick="buyWhatsApp(this)">Buy on WhatsApp</a>
+</div>
+
+<div class="item kabab">
+  <img src="./Images/Shami Kabbab/vegatables Kabab.png">
+  <h3>Vegatables Kabab</h3>
+  <p>Price: Rs <span class="price">50</span></p>
+
+  <div class="order">
+    Qty:
+    <input type="number" value="1" min="1" onchange="updateTotal(this)">
+    <span>Total: Rs <b class="total">50</b></span>
+  </div>
+
+  <!-- DAYS / CALENDAR -->
+  <div class="days">
+    <label>Select multiple Days:</label>
+    <input type="text"
+           class="date-input"
+           placeholder="Select days"
+           readonly
+           onclick="openCalendar(this)">
+    <div class="calendar hidden"></div>
+  </div>
+
+  <a class="buy" href="#" onclick="buyWhatsApp(this)">Buy on WhatsApp</a>
+</div>
+
+
+<!-- DRINKS -->
+<div class="item drinks">
+  <img src="./Images/Drinks/Slice Juice.jpg">
+  <h3>Slice Juice</h3>
+  <p>Price: Rs <span class="price">50</span></p>
+
+  <div class="order">
+    Qty:
+    <input type="number" value="1" min="1" onchange="updateTotal(this)">
+    <span>Total: Rs <b class="total">50</b></span>
+  </div>
+
+  <!-- DAYS / CALENDAR -->
+  <div class="days">
+    <label>Select multiple Days:</label>
+    <input type="text"
+           class="date-input"
+           placeholder="Select days"
+           readonly
+           onclick="openCalendar(this)">
+    <div class="calendar hidden"></div>
+  </div>
+
+  <a class="buy" href="#" onclick="buyWhatsApp(this)">Buy on WhatsApp</a>
+</div>
+
+
+<div class="item drinks">
+  <img src="./Images/Drinks/Bannana Juice.png">
+  <h3>Bannana Juice</h3>
+  <p>Price: Rs <span class="price">50</span></p>
+
+  <div class="order">
+    Qty:
+    <input type="number" value="1" min="1" onchange="updateTotal(this)">
+    <span>Total: Rs <b class="total">50</b></span>
+  </div>
+
+  <!-- DAYS / CALENDAR -->
+  <div class="days">
+    <label>Select multiple Days:</label>
+    <input type="text"
+           class="date-input"
+           placeholder="Select days"
+           readonly
+           onclick="openCalendar(this)">
+    <div class="calendar hidden"></div>
+  </div>
+
+  <a class="buy" href="#" onclick="buyWhatsApp(this)">Buy on WhatsApp</a>
+</div>
+
+<div class="item drinks">
+  <img src="./Images/Drinks/Carrot Juice.png">
+  <h3>Carrot Juice</h3>
+  <p>Price: Rs <span class="price">50</span></p>
+
+  <div class="order">
+    Qty:
+    <input type="number" value="1" min="1" onchange="updateTotal(this)">
+    <span>Total: Rs <b class="total">50</b></span>
+  </div>
+
+  <!-- DAYS / CALENDAR -->
+  <div class="days">
+    <label>Select multiple Days:</label>
+    <input type="text"
+           class="date-input"
+           placeholder="Select days"
+           readonly
+           onclick="openCalendar(this)">
+    <div class="calendar hidden"></div>
+  </div>
+
+  <a class="buy" href="#" onclick="buyWhatsApp(this)">Buy on WhatsApp</a>
+</div>
+
+<!-- More Products Under This div -->
+
+</div>
+<section id="about"></section>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+
+
+<div class="testimonials-bg-color">
+  <div class="TESTIMONIALS"><b>About</b></div>
+    <br>
+      <p class="SAYING-About-US">&nbsp;<b>WHAT ARE THEY&nbsp;<span id="color-Red">&nbsp;SAYING ABOUT US&nbsp;</b></span> </p>
+        <div id="For Link About" class="Enim-p">
+          <p style="color: grey;"><q>At Tiffin Time, we are passionate about delivering fresh, delicious, and affordable meals right to your doorstep. Started in 2024, our mission is to make homemade-style meals accessible to everyone.
+            Our team carefully prepares each dish using high-quality ingredients. Customer satisfaction is our top priority, and we always aim to make your tiffin experience delightful!Order through our website and get your favorite products delivered directly via WhatsApp!</q></p> 
+  </div>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<div>
+    <p id="book-a-table">BOOK A ORDER</p>
+    <P id="book-your-stay"><b>BOOK&nbsp;<span id="color-Red">YOUR STAY</span>&nbsp;WITH US</b></P>
+
+</div>
+<section id="contact"></section>
+
+<div class="Main-Container-5">
+    <img src="./Images/Tiffin Pic.png" width="20%" >
+
+
+<main class="Form-Bg-color">
+  
+<form>
+  
+<input id="Form-1-colunm" placeholder="Your Name" type="text">
+<input id="Form-1-colunm" placeholder="Your Email" type="text">
+<input id="Form-1-colunm" placeholder="Your Phone" type="text">
+<br><br>
+<input id="Form-1-colunm" placeholder="Date" type="text">
+<input id="Form-1-colunm" placeholder="Time" type="text">
+<input id="Form-1-colunm" placeholder="# Of People" type="text">
+<br><br>
+<textarea id="text-area-cont-5" placeholder="What do you Want?" cols="75" rows="5"></textarea>
+<br><br>
+</form>
+
+<div class="form-btn">
+  <a class="buy" href="#" onclick="buyFormWhatsApp()">Buy on WhatsApp</a>
+</div>  
+   
+</main>
+</div>
+
+<br><br>
+
+<br><br><br><br>    
+
+<footer class="Main-Container-10">
+
+<main class="Main-Container-10-footer">
+
+<div class="footer-color-1">
+<h4>Our Address</h4>
+<P >North Nazimabad Block H Karachi</P>      
+</div>
+<br>
+
+<div class="footer-color-1">
+    <h4>For Order</h4>
+    <P >Phone: +923172156101</P>
+    <p>Email: tiffintime420@gmail.com</p>      
+    </div>
+
+<br>
+<div class="footer-color-1">
+<h4>Opening Hours</h4>
+<P>Monday-Sat: 06AM-23PM</P>
+<P>Sunday: Closed</P>      
+</div>
+        
+</main>
+
+<br>
+<br>
+<hr>
+
+<p id="Copy-right">Copy Right Tiffin Time.All Rights Reserverd</p>
+
+<br>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
