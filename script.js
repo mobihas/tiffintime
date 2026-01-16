@@ -20,14 +20,27 @@ function updateTotal(input) {
   item.querySelector('.total').innerText = total;
 }
 
-// WHATSAPP BUY BUTTON
+// WHATSAPP BUY BUTTON (PRODUCT ORDER)
 function buyWhatsApp(btn) {
   let item = btn.closest('.item');
+
   let name = item.querySelector('h3').innerText;
-  let qty = item.querySelector('input').value;
+  let qty = item.querySelector('input[type="number"]').value;
+  let price = item.querySelector('.price').innerText;
   let total = item.querySelector('.total').innerText;
 
-  let msg = `Order: ${name}%0AQuantity: ${qty}%0ATotal: Rs ${total}`;
+  // GET SELECTED DATES
+  let datesInput = item.querySelector('.date-input');
+  let dates = datesInput.value ? datesInput.value : "Not selected";
+
+  let msg =
+    `🛒 *New Tiffin Order* %0A` +
+    `🍽 Product: ${name} %0A` +
+    `🔢 Quantity: ${qty} %0A` +
+    `📅 Days: ${dates} %0A` +
+    `💰 Price (each): Rs ${price} %0A` +
+    `💵 Total: Rs ${total}`;
+
   btn.href = `https://wa.me/923172156101?text=${msg}`;
 }
 
@@ -63,8 +76,8 @@ function updateSelectedDates(calendar,input){
   input.value = selected.join(", ");
 }
 
-// FORM WHATSAPP
-function buyFormWhatsApp(){
+// FORM WHATSAPP ORDER
+function buyFormWhatsApp() {
   let name = document.querySelector('input[placeholder="Your Name"]').value;
   let email = document.querySelector('input[placeholder="Your Email"]').value;
   let phone = document.querySelector('input[placeholder="Your Phone"]').value;
@@ -73,6 +86,16 @@ function buyFormWhatsApp(){
   let people = document.querySelector('input[placeholder="# Of People"]').value;
   let message = document.querySelector('textarea').value;
 
-  let msg = `New Order Request%0AName: ${name}%0AEmail: ${email}%0APhone: ${phone}%0ADate: ${date}%0ATime: ${time}%0APeople: ${people}%0AMessage: ${message}`;
+  let msg =
+    `📋 *Manual Order Request* %0A` +
+    `👤 Name: ${name} %0A` +
+    `📧 Email: ${email} %0A` +
+    `📞 Phone: ${phone} %0A` +
+    `📅 Date: ${date} %0A` +
+    `⏰ Time: ${time} %0A` +
+    `👥 Persons: ${people} %0A` +
+    `📝 Message: ${message}`;
+
   window.open(`https://wa.me/923172156101?text=${msg}`, '_blank');
 }
+
